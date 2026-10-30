@@ -1,6 +1,6 @@
 # IP-Symcon Module Store
 
-Repository: `https://github.com/84qrbvm76x-hash/Zehnder-Q350-Symcon`
+Repository: `https://github.com/MCVnet/SYMCON-ComfoAir`
 Release-Tag (nach Tests anlegen): `v1.0.0`
 Branch: `main`
 
@@ -9,6 +9,6 @@ Branch: `main`
 - Empfohlener Kanal bis Abschluss der Hardwaretests: **Testing**, alternativ Beta mit deutlichem Hinweis auf offene Tests. **Stable** derzeit nicht empfohlen.
 - Versionsinformationen: `Initiale Version 1.0.0: native LAN-C-Sensorabfrage, Steuerungsvariablen, Kachel Hell/Dunkel, erweiterte Diagnostik.`
 - Beschreibung: `Natives IP-Symcon-Modul zur lokalen Anbindung von Zehnder ComfoAir Q350/Q450 über ComfoConnect LAN C. Liest Temperaturen, Luftmengen, Leistung und Filterrestlaufzeit aus und stellt Steuerbefehle sowie eine HTML-Kachel bereit.`
-- Dokumentation: `https://github.com/84qrbvm76x-hash/Zehnder-Q350-Symcon#readme`
+- Dokumentation: `https://github.com/MCVnet/SYMCON-ComfoAir#readme`
 
 Die Store-Freigabe und die Gerätevalidierung können nicht durch dieses Paket erfolgen.

@@ -13,7 +13,7 @@ Ein natives IP-Symcon-Modul (SymBox/Windows/Linux) zur lokalen Kommunikation mit
 
 ## Installation in Symcon
 
-1. In **Kerninstanzen → Modules/Modulverwaltung** das Repository `https://github.com/84qrbvm76x-hash/Zehnder-Q350-Symcon` hinzufügen beziehungsweise aktualisieren.
+1. In **Kerninstanzen → Modules/Modulverwaltung** das Repository `https://github.com/MCVnet/SYMCON-ComfoAir` hinzufügen beziehungsweise aktualisieren.
 2. Unter **Instanz hinzufügen → Zehnder** `Zehnder ComfoAir Q350/Q450 Native` auswählen.
 3. Gateway-IP eintragen, Port **56747** bestätigen, Gateway suchen, Registrierung/Verbindung testen.
 4. Das Abfrageintervall konfigurieren (0 = aus; positiver Wert mind. 5 Sekunden). Das Intervall ist eine Timer-Auslösezeit, keine garantierte Messwertfrequenz: der zeitlich begrenzte TCP-Abruf kann länger dauern.
