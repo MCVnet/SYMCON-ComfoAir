@@ -1,0 +1,231 @@
+{
+  "elements": [
+    {
+      "type": "Label",
+      "caption": "Zehnder ComfoAir Q350/Q450 Native – Konfiguration"
+    },
+    {
+      "type": "Select",
+      "name": "TileTheme",
+      "caption": "Kachel-Design",
+      "options": [
+        {
+          "caption": "Hell – weißer Hintergrund",
+          "value": "light"
+        },
+        {
+          "caption": "Dunkel – anthrazit",
+          "value": "dark"
+        }
+      ]
+    },
+    {
+      "type": "ValidationTextBox",
+      "name": "Host",
+      "caption": "IP-Adresse ComfoConnect LAN C"
+    },
+    {
+      "type": "NumberSpinner",
+      "name": "Port",
+      "caption": "TCP-Port"
+    },
+    {
+      "type": "NumberSpinner",
+      "name": "PIN",
+      "caption": "Registrierungs-PIN"
+    },
+    {
+      "type": "NumberSpinner",
+      "name": "Interval",
+      "caption": "Sensorabfrage alle N Sekunden (0 = Aus, Mindestwert 5 Sekunden)"
+    },
+    {
+      "type": "CheckBox",
+      "name": "EnableControl",
+      "caption": "Steuerbefehle freigeben"
+    },
+    {
+      "type": "NumberSpinner",
+      "name": "BoostSeconds",
+      "caption": "Boost-Dauer (Sekunden)"
+    },
+    {
+      "type": "NumberSpinner",
+      "name": "BypassSeconds",
+      "caption": "Bypass-Dauer (Sekunden)"
+    }
+  ],
+  "actions": [
+    {
+      "type": "Label",
+      "caption": "Inbetriebnahme und Diagnose"
+    },
+    {
+      "type": "Button",
+      "caption": "Gateway im LAN suchen (UDP)",
+      "onClick": "ZQ_Discover($id); echo GetValue(IPS_GetObjectIDByIdent('State', $id));",
+      "link": false
+    },
+    {
+      "type": "Button",
+      "caption": "Registrieren und Verbindung testen",
+      "onClick": "ZQ_TestConnection($id); echo GetValue(IPS_GetObjectIDByIdent('State', $id));",
+      "link": false
+    },
+    {
+      "type": "Button",
+      "caption": "Sensoren jetzt lesen",
+      "onClick": "ZQ_ReadSensors($id); echo GetValue(IPS_GetObjectIDByIdent('SensorDiagnostics', $id));",
+      "link": false
+    },
+    {
+      "type": "Button",
+      "caption": "Betriebszustände auslesen",
+      "onClick": "ZQ_ReadControlStatus($id); echo GetValue(IPS_GetObjectIDByIdent('ControlObserved', $id));",
+      "link": false
+    },
+    {
+      "type": "Label",
+      "caption": "Direktsteuerung in der Instanz – bitte erst nach erfolgreicher Sensorprüfung und nur bei freigegebenem Schreibzugriff verwenden."
+    },
+    {
+      "type": "Label",
+      "caption": "Lüftungsstufe"
+    },
+    {
+      "type": "RowLayout",
+      "items": [
+        {
+          "type": "Button",
+          "caption": "Stufe 0",
+          "onClick": "ZQ_SetSpeed($id, 0); echo GetValue(IPS_GetObjectIDByIdent('ControlStatus', $id));",
+          "link": false
+        },
+        {
+          "type": "Button",
+          "caption": "Stufe 1",
+          "onClick": "ZQ_SetSpeed($id, 1); echo GetValue(IPS_GetObjectIDByIdent('ControlStatus', $id));",
+          "link": false
+        },
+        {
+          "type": "Button",
+          "caption": "Stufe 2",
+          "onClick": "ZQ_SetSpeed($id, 2); echo GetValue(IPS_GetObjectIDByIdent('ControlStatus', $id));",
+          "link": false
+        },
+        {
+          "type": "Button",
+          "caption": "Stufe 3",
+          "onClick": "ZQ_SetSpeed($id, 3); echo GetValue(IPS_GetObjectIDByIdent('ControlStatus', $id));",
+          "link": false
+        }
+      ]
+    },
+    {
+      "type": "Label",
+      "caption": "Betriebsart"
+    },
+    {
+      "type": "RowLayout",
+      "items": [
+        {
+          "type": "Button",
+          "caption": "Automatik",
+          "onClick": "ZQ_SetMode($id, 0); echo GetValue(IPS_GetObjectIDByIdent('ControlStatus', $id));",
+          "link": false
+        },
+        {
+          "type": "Button",
+          "caption": "Manuell",
+          "onClick": "ZQ_SetMode($id, 1); echo GetValue(IPS_GetObjectIDByIdent('ControlStatus', $id));",
+          "link": false
+        }
+      ]
+    },
+    {
+      "type": "Label",
+      "caption": "Boost"
+    },
+    {
+      "type": "RowLayout",
+      "items": [
+        {
+          "type": "Button",
+          "caption": "Boost EIN",
+          "onClick": "ZQ_SetBoost($id, true); echo GetValue(IPS_GetObjectIDByIdent('ControlStatus', $id));",
+          "link": false
+        },
+        {
+          "type": "Button",
+          "caption": "Boost AUS",
+          "onClick": "ZQ_SetBoost($id, false); echo GetValue(IPS_GetObjectIDByIdent('ControlStatus', $id));",
+          "link": false
+        }
+      ]
+    },
+    {
+      "type": "Label",
+      "caption": "Bypass"
+    },
+    {
+      "type": "RowLayout",
+      "items": [
+        {
+          "type": "Button",
+          "caption": "Bypass Auto",
+          "onClick": "ZQ_SetBypass($id, 0); echo GetValue(IPS_GetObjectIDByIdent('ControlStatus', $id));",
+          "link": false
+        },
+        {
+          "type": "Button",
+          "caption": "Bypass EIN",
+          "onClick": "ZQ_SetBypass($id, 1); echo GetValue(IPS_GetObjectIDByIdent('ControlStatus', $id));",
+          "link": false
+        },
+        {
+          "type": "Button",
+          "caption": "Bypass AUS",
+          "onClick": "ZQ_SetBypass($id, 2); echo GetValue(IPS_GetObjectIDByIdent('ControlStatus', $id));",
+          "link": false
+        }
+      ]
+    },
+    {
+      "type": "Label",
+      "caption": "Temperaturprofil"
+    },
+    {
+      "type": "RowLayout",
+      "items": [
+        {
+          "type": "Button",
+          "caption": "Normal",
+          "onClick": "ZQ_SetTemperatureProfile($id, 0); echo GetValue(IPS_GetObjectIDByIdent('ControlStatus', $id));",
+          "link": false
+        },
+        {
+          "type": "Button",
+          "caption": "Kühl",
+          "onClick": "ZQ_SetTemperatureProfile($id, 1); echo GetValue(IPS_GetObjectIDByIdent('ControlStatus', $id));",
+          "link": false
+        },
+        {
+          "type": "Button",
+          "caption": "Warm",
+          "onClick": "ZQ_SetTemperatureProfile($id, 2); echo GetValue(IPS_GetObjectIDByIdent('ControlStatus', $id));",
+          "link": false
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "caption": "Zustände nach Steuerung erneut auslesen",
+      "onClick": "ZQ_ReadControlStatus($id); echo GetValue(IPS_GetObjectIDByIdent('ControlObserved', $id));",
+      "link": false
+    },
+    {
+      "type": "Label",
+      "caption": "Tipp: Die gleichen Funktionen stehen zusätzlich als bedienbare Variablen in der Visualisierung zur Verfügung."
+    }
+  ]
+}
