@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.1 – 2026-11-07
+
+- Einheitliches Grid-/Flex-Layout ersetzt die gestapelten Beta-CSS-Regeln.
+- Kleine Kacheln ohne horizontale Überläufe; Hell-/Dunkelmodus erhalten.
+- Lesebuttons werden nach Aufrufen wieder freigegeben.
+- Automatische Browserprüfung und GitHub Actions ergänzt.
+- Modul-IDs und PHP-Code unverändert; Paketversion 1.0.1, Build 101.
+
 ## 1.0.0 – 2026-10-30
 - Release-Struktur und Metadaten für GitHub aktualisiert
 - URL-Felder für Symcon ergänzt

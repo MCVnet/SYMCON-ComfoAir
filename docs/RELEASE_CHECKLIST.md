@@ -1,4 +1,4 @@
-# Release-Checkliste 1.0.0
+# Release-Checkliste 1.0.1
 
 - [x] `library.json`/`module.json` gültiges JSON, URL-Werte als Strings
 - [x] Bibliotheks- und Modul-GUIDs der Vorversion beibehalten
@@ -15,4 +15,4 @@
 - [ ] Lizenz- und Bildnutzungsrechte verbindlich klären
 - [ ] Abschlussprüfung im Symcon Module Store durchführen
 
-Der Name Version 1.0.0 bedeutet nicht, dass die ausstehenden Punkte erledigt sind. Für einen Stable-Store-Release müssen die offenen Prüfpunkte nachgeholt werden.
+Der Name Version 1.0.1 bedeutet nicht, dass die ausstehenden Punkte erledigt sind. Für einen Stable-Store-Release müssen die offenen Prüfpunkte nachgeholt werden.

@@ -1,8 +1,8 @@
-# Zehnder ComfoAir Q350/Q450 Native – Version 1.0.0
+# Zehnder ComfoAir Q350/Q450 Native – Version 1.0.1
 
 Ein natives IP-Symcon-Modul (SymBox/Windows/Linux) zur lokalen Kommunikation mit **Zehnder ComfoAir Q350/Q450** über die **ComfoConnect LAN C**. Keine Cloud, kein Docker, kein separater Python-Dienst.
 
-> **Freigabestatus:** GitHub-Release-Kandidat 1.0.0. Die Sensordaten wurden auf einer Q350-Anlage im Projekt erfolgreich ausgelesen. Steuerbefehle und Q450-Kompatibilität sind noch nicht vollständig mit echter Hardware validiert. Der Release ist **kein nachgewiesen produktionsreifer Stable-Release**.
+> **Freigabestatus:** GitHub-Release-Kandidat 1.0.1. Die Sensordaten wurden auf einer Q350-Anlage im Projekt erfolgreich ausgelesen. Steuerbefehle und Q450-Kompatibilität sind noch nicht vollständig mit echter Hardware validiert. Der Release ist **kein nachgewiesen produktionsreifer Stable-Release**.
 
 ## Voraussetzungen
 
@@ -41,3 +41,9 @@ Eine GitHub-Release-Erstellung oder Store-Einreichung erfolgt nicht automatisch 
 ## Rechtliches
 
 Inoffizielles Community-Projekt, keine Zugehörigkeit zu oder Freigabe durch Zehnder. Das eingebettete Anlagenmotiv ist ein generiertes Visualisierungsbild und kein offizielles Produktfoto. **Die Lizenzfreigabe ist vor einer öffentlichen Open-Source-Veröffentlichung durch den Rechteinhaber zu klären.** Siehe `docs/LICENSING.md`.
+
+## Responsive Kachelvisualisierung
+
+Die überarbeitete HTML-Kachel passt Messwerte und Steuerung an kleine Kacheln,
+Smartphones, Tablets und Desktop an. Details zu Breakpoints, Austausch und Tests:
+[Responsive Kachel](docs/RESPONSIVE_TILE.md).
